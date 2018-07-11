@@ -10,7 +10,7 @@ const app = express();
 
 app.use((req, res, next) => {
   const authorization = req.headers.authorization || '';
-  const token = authorization.replace('Bearer ', '');
+  const token = authorization.replace('Bearer ', '') || req.query.token;
 
   if (!service.config.tokens.includes(token)) {
     res.status(403).send('Invalid token');
