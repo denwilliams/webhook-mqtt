@@ -1,6 +1,6 @@
 {
   "name": "webhook-mqtt",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Relay HTTP webhooks to MQTT",
   "main": "main.js",
   "bin": {
