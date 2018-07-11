@@ -1,0 +1,13 @@
+mqtt:
+  uri: mqtt://localhost
+  prefix: webhook/
+service:
+  port: 8080
+  tokens:
+    - 'my_secret_token'
+  hooks:
+    - path: callme # ie http://host/callme
+      method: get
+      topic: call/me # ie webhook/call/me
+      message: {} # if not provided will pass body through
+
